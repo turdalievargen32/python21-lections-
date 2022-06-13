@@ -1,0 +1,19 @@
+a = int(input('Введите первое число:'))
+b = int(input('Введите второе число:'))
+c = input('Выберите операцию из следующих +,-,*,/,%,**,//,:')
+if c== '+':
+    print('Solution:',a+b)
+elif c=='-':
+    print('Solution:',a-b)
+elif c=='*':
+    print('Solution:',a*b)
+elif c=='/':
+    print('Solution:',a/b)
+elif c=='%':
+    print('Solution:',a%b)
+elif c=='**':
+    print('Solution:',a**b)
+elif c=='//':
+    print('Solution:',a//b)
+else:
+    print('Данной операции нет в системе')
