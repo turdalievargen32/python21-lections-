@@ -1,3 +1,9 @@
-a = {'a': 1, 'b': 2, 'c': 3} 
-{v:k  for k, v in a.items()}
-print(a)
+
+a = 1
+while a :
+    print("while")
+    if a ==1:
+        break
+else:
+    print("else")
+    
