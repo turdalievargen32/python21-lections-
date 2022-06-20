@@ -1,0 +1,83 @@
+
+task2
+b = 10
+c = 11
+
+try:
+    print(a)
+except NameError:
+    print('такой переменной нет')
+
+task3
+num1 = int(input())
+num2 = int(input())
+try:
+    print(num1/num2)
+except:
+    if num2==0:
+        print('На ноль делить нельзя')
+
+task4
+num1 = input()
+num2 = input()
+try:
+    print(int(num1)+int(num2))
+except : 
+    print('Введите число!')
+
+task5
+dict_ = {'key1': 'value1', 'key2': 'value2'} 
+try:
+    print(dict_['key3'])
+except:
+    print('Нет такого ключа!')
+
+task6
+
+list_ = [1, 4, 9, 16, 25, 36] 
+try:
+    print(list_[8])
+except:
+    print('Нет такого элемента!')
+
+task7
+try:
+    age = int(input())
+
+    if age<18:
+        raise ValueError('Доступ запрещён')
+except ValueError:
+    print('Введён некорректный возраст')
+else:
+    print('Спасибо')
+finally:
+    print('До свидания!')
+
+
+try:
+    age = int(input())
+
+    if age<18:
+        print('Доступ запрещён')
+except:
+    print('Введён некорректный возраст')
+else:
+    print('Спасибо')
+finally:
+    print('До свидания!')
+
+taks8
+try:
+    num1=  input()
+    num2 = input()
+    print(int(num1)/int(num2))
+except:
+    print('Произошла ошибка!')
+
+task9
+cash = int(input())
+if cash < 0:
+    raise ValueError('Сумма не может быть отрицательной! ')
+else:
+    print(int(cash))
+    
