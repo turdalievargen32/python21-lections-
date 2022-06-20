@@ -1,0 +1,89 @@
+# 1
+list_ = [i for i in range(1,101)]
+print(list_)
+
+# 2
+list_ = [i for i in range(1,51)if  i % 2]
+print(list_)
+
+#3 
+
+list_ = [-4, -3, -2, -1, 0, 1, 2, 3, 4]
+
+int_list = [i for i in list_ if i > 0 and not i%2]
+print(int_list)
+
+
+# 4 
+list_ = []
+list_ = list( (i**2 for i in range(1,26)) )
+print(list_)
+
+# 5 
+str_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+int_list = [int(i) for i in str_list]
+print(int_list)
+
+#6
+
+list_ = [x*x if x % 2 == 0 else x for x in range(1,11)]
+print(list_)
+
+#7
+list_ = [ False if i % 2 else True for i in range(1,11) ]
+print(list_)
+
+
+# 8
+list_name = ['paul', 'john', 'george', 'ringo', 'eric', 'patty', 'yoko', 'cynthia', 'linda', 'jude' ] 
+new_list = ['shorter' if len(i) <=4  else 'longer' for i in list_name]
+print(new_list)
+ 
+# 9
+dict_ = {num : num**2 for num in range(1,11)} 
+print(dict_)
+
+
+# 10
+n = int(input())
+dict_ = {i: i*i for i in range(1,501) if i % n==0 }
+print(dict_)
+
+
+# 11
+a = {'a': 1, 'b': 5, 'c': 4, 'd': 3}
+dict_ = {key: list(range(1, value + 1)) for key, value in a.items() }
+print(dict_)
+
+#12
+
+
+
+#13
+string_ = 'In 1984 there were 13 instances of a protest with over 1000 people attending'
+list_ = [str(list1) for list1 in str.split(string_) if list1.isdigit()]
+print(list_)
+
+#14
+
+
+#15
+
+
+
+
+
+#16
+lst = []
+
+for i in range(11):
+    if i % 2 == 0:
+        lst.append(i // 2)
+
+list_ = [i // 2 for i in range(11) if i % 2 == 0]
+print(list_)
+
+
+#17
+
+
