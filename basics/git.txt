@@ -1,4 +1,9 @@
 git init - создаем git репрозиторий из текушей папки
+git remote add название shh-ссылку - сохраняем shh в переменную 
+git remote -v - посмотреть все сохраненные shh - ссылки 
 git add - просто пишем эту команду каждый раз перед commit 
 git commit -m 'message'  - создаем новую версию 
 git push origin master - закидываем версию в git.hub
+git pull origin master - стягиваем новые изменения с github(если они есть)
+git clone  shh - ссылка - стягиваем изменения с другого репрозитория
+git log - посмотреть все комнаты 
