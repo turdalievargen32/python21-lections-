@@ -30,6 +30,13 @@ def dictionary(di):
 dictionary(dict_)
  
  #task6
+num = 6 
+def check(num):
+    if num % 2!=0:
+        return "It is odd number"
+    else:
+        return  "It is even number"
+print(check(10))
 
 
 #task7
@@ -60,4 +67,9 @@ def multiply_list(list_):
 print(multiply_list([1, 2, 3, 4, 5]))
 
 #task10
-
+def sum_digits(i):
+    result = 0
+    for i in str(i):
+        result += int(i)
+    return result
+print(sum_digits(105))
