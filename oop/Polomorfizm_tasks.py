@@ -71,7 +71,55 @@ get_human_info(student)
 get_human_info(person)
 
 
+# 5
+class OS():
+    def __init__(self,version):
+        self.version = version
+
+class Windows(OS):
+    def copy(self, text):
+        self.text = text
+        return f'скопирован текст "{self.text}" горячими клавишами CTRL + C'
+
+class MacOS(OS):
+    def copy(self, text):
+        self.text = text
+        return f'скопирован текст "{self.text}" горячими клавишами COMMAND + C'
+
+class Linux(OS):
+    def copy(self,text):
+        self.text = text 
+        return f'скопирован текст "{self.text}" горячими клавишами CTRL + SHIFT + C'
+
+win = Windows(11)
+mac = MacOS(10)
+lin = Linux(2)
+
+print(win.copy('Полиморфизм — одна из основных парадигм ООП'))
+ 
+print(mac.copy('Полиморфизм - разное поведение одного и того же метода в разных классах')) 
+ 
+print(lin.copy('На самом деле одинаковым является только имя метода, его исходный код зависит от класса'))
 
 
 
+# 7 
+class Money():
+    def __init__(self,country,symbol):
+        self.country = country
+        self.symbol = symbol
+
+class Dollar(Money):
+    rate = 84.80 
+    
+    def exchange(self,amount):
+        res =  self.rate * amount
+        return f'$ {amount} равен {res} сомам'
+
+class Euro(Money):
+    rate = 98.40
+    
+    def exchange(self,amount):
+        res = self.rate * amount
+        return f'€ {amount} равен {res} сомам'
 
