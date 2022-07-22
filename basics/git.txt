@@ -15,3 +15,17 @@ git checkout -b - создать ветку и сразу перейти на н
 git branch  -D  - удалить ветку
 git  reset HEAD - отменяет последний коммит
 git restore  - работает как add, но наоборот 
+
+
+
+# Создаем и соединяем новую директорию и терминал 
+1) создаем папку
+2) создаем файл 
+3) git init (git status для проверки)
+4) git add name_of_folder or . this means all of them
+5) git commit -m 'message'
+6) создаем директорию
+7) git remote add origin shh-ссылка
+8) git add .
+9) git commit -m "message"
+10) git push origin master или название ветки 
