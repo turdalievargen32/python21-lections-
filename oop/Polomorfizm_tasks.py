@@ -70,6 +70,45 @@ get_human_info(employee)
 get_human_info(student)
 get_human_info(person)
 
+# 4 
+from abc import ABC, abstractmethod
+from math import pi
+
+class Shape(ABC):
+    @abstractmethod
+    def get_area(self):
+        pass
+    
+class Triangle(Shape):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def get_area(self):
+        return 1 / 2 * self.base * self.height
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def get_area(self):
+        return self.length**2
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        return pi * self.radius**2
+
+triangle = Triangle(6, 3)
+square = Square(4)
+circle = Circle(5)
+
+print(triangle.get_area()) 
+print(square.get_area()) 
+print(circle.get_area())
+
 
 # 5
 class OS():
@@ -101,6 +140,34 @@ print(mac.copy('Полиморфизм - разное поведение одн�
  
 print(lin.copy('На самом деле одинаковым является только имя метода, его исходный код зависит от класса'))
 
+# 6
+class Language:
+    def __init__(self, level, type):
+        self.level = level
+        self.type = type
+
+class Python(Language):
+    def write_function(self, func_name, arg):
+        return f'def {func_name}({arg}):'
+
+    def create_variable(self, var_name, value):
+        return f'{var_name} = {value.__repr__()}'
+        
+class JavaScript(Language):
+    def write_function(self, func_name, arg):
+        a = '{     }'
+        return f'function {func_name}({arg}) {a};'
+
+    def create_variable(self, var_name, value):
+        return f'let {var_name} = {value.__repr__()};'
+
+py = Python('mid', 3)
+print(py.write_function('get_code', 'a')) 
+print(py.create_variable('name', 'John'))
+
+js = JavaScript('mid', 4)
+print(js.write_function('validate', 'form'))
+print(js.create_variable('password', 'john@123'))
 
 
 # 7 
@@ -123,3 +190,40 @@ class Euro(Money):
         res = self.rate * amount
         return f'€ {amount} равен {res} сомам'
 
+# 8 
+class Planet:
+    def __init__(self, orbit):
+        self.orbit = orbit
+    
+          
+class Mercury(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+        
+    def get_age(self, earth_age):
+        res = earth_age * 365 // self.orbit
+        return f'на Меркурии ваш возраст составляет {res} лет'
+
+
+class Venus(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+
+    def get_age(self, earth_age):
+        res = earth_age * 365 / self.orbit * 365
+        return f'на Венере ваш возраст составляет {round(res)} дней'
+
+class Jupiter(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+
+    def get_age(self , earth_age):
+        res = (earth_age * 365 // self.orbit) * (24 * 365)
+        return f'на Юпитере ваш возраст составляет {res} часов'
+
+merc = Mercury(88)
+print(merc.get_age(20))
+ven = Venus(225)
+print(ven.get_age(20))
+jup = Jupiter(12)
+print(jup.get_age(20))

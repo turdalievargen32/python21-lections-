@@ -312,3 +312,121 @@
 # print(obj.swim())
 
 
+# class SmartPhones:
+#     def __init__(self,name,color,memory,battery=0):
+#         self.name = name
+#         self.color = color
+#         self.memory = memory
+#         self.battery = battery
+    
+#     def __str__(self):
+#         return f'{self.name} {self.memory}'
+    
+    
+#     def charge(self, percent):
+#         self.percent += percent
+#         return self.battery
+
+# class Iphone(SmartPhones):
+#     def __init__( self,name,color,memory,ios, battery=0):
+#         super().__init__(name,color,memory,battery)        
+#         self.ios = ios
+        
+#     def send_imessage(self, message):
+#         return f'sending {message} from {self.name} {self.memory}'
+
+# class Samsung(SmartPhones):
+#     def __init__(self,name,color,memory,android,battery=0,):
+#         super().__init__(name,color,memory,battery)
+#         self.android = android
+
+#     def show_time(self):
+#         from datetime import datetime
+#         current_time = datetime.now()
+#         return current_time.time()
+
+# phone = SmartPhones('generic', 'blue', '128GB') 
+# print(phone)
+# print(phone.battery) 
+# phone.charge(20) 
+# print(phone.battery) 
+# iphone7 = Iphone('Iphone 7', 'gold', '128gb', '12.1.3') 
+# print(iphone7)
+# print(iphone7.send_imessage('hello')) 
+
+# # samsung21 = Samsung('Samsung A21', 'black', '256gb', 'Oreo') 
+# # print(samsung21.show_time())
+
+
+# class Language:
+#     def __init__(self,leve1, type):
+#         self.levl1 = leve1 
+#         self.type = type
+
+# class Python(Language):
+#     def write_function(self,func_name, arg):
+#         self.func_name = func_name
+#         self.arg = arg
+
+# class JavaScript(Language):
+#     def create_variable(self,var_name,value): 
+#         self.var_name = var_name
+#         self.value = value
+
+# py = Python()
+# print(py.write_function('get_code', 'a')) 
+# print(py.create_variable('name', 'John'))
+
+# js =  JavaScript()
+# print(js.write_function('validate', 'form'))
+# print(js.create_variable('password', 'john@123'))
+class Planet:
+    def __init__(self, orbit):
+        self.orbit = orbit
+    
+          
+class Mercury(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+        
+    def get_age(self, earth_age):
+        res = earth_age * 365 // self.orbit
+        return f'на Меркурии ваш возраст составляет {res} лет'
+
+
+class Planet:
+    def __init__(self, orbit):
+        self.orbit = orbit
+    
+          
+class Mercury(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+        
+    def get_age(self, earth_age):
+        res = earth_age * 365 // self.orbit
+        return f'на Меркурии ваш возраст составляет {res} лет'
+
+
+class Venus(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+
+    def get_age(self, earth_age):
+        res = earth_age * 365 // self.orbit * 365
+        return f'на Венере ваш возраст составляет {res} дней'
+
+class Jupiter(Planet):
+    def __init__(self, orbit):
+        super().__init__(orbit)
+
+    def get_age(self , earth_age):
+        res = (earth_age * 365 // self.orbit) * (24 * 365)
+        return f'на Юпитере ваш возраст составляет {res} часов'
+
+merc = Mercury(88)
+print(merc.get_age(20))
+ven = Venus(225)
+print(ven.get_age(20))
+jup = Jupiter(12)
+print(jup.get_age(20))
